@@ -15,7 +15,7 @@ public class JpaAuditingConfig {
 	public AuditorAware<String> auditorProvider() {
 		return new AuditorAwareImpl();
 	}
-	
+	//tự động thêm ai là ng thêm bài viết, vào ngày nào
 	public static class AuditorAwareImpl implements AuditorAware<String> {
 		@Override
 		public String getCurrentAuditor() {

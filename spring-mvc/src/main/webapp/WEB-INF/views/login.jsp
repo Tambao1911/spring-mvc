@@ -18,9 +18,9 @@
 						class="img-fluid" alt="Phone image">
 				</div>
 				<div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                    <c:if test="${not empty message}">
-                        <div class="alert alert-${alert}" role="alert">
-                                ${message}
+                    <c:if test="${param.incorrectAccount != null }">
+                        <div class="alert alert-danger">
+                                Username  Or Password Incorrect!
                         </div>
                     </c:if>
                     <form action="j_spring_security_check" id="formLogin" method="post">
