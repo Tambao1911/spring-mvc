@@ -21,7 +21,7 @@
               http://www.springframework.org/schema/context/spring-context.xsd">
 
    <context:component-scan
-      base-package="com.tambao.controller" />
+      base-package="com.tambao.controller, com.tambao.api" />
 
    <mvc:annotation-driven />
 

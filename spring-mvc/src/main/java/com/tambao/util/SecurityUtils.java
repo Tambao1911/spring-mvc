@@ -6,7 +6,14 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 
+import com.tambao.dto.MyUser;
+
 public class SecurityUtils {
+	// Lấy tất cả từ MyUser ra (lưu trữ thông tin)
+	public static MyUser getPrincipal() {
+		MyUser myUser = (MyUser) (SecurityContextHolder.getContext()).getAuthentication().getPrincipal();
+        return myUser;
+    }
 	
 	@SuppressWarnings("unchecked")
 	public static List<String> getAuthorities(){

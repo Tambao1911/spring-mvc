@@ -1,3 +1,4 @@
+<%@ page import = "com.tambao.util.SecurityUtils" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -16,12 +17,12 @@
             <ul class="nav ace-nav">
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        Xin chào, ${USERMODEL.fullName}
+                        Xin chào,<%=SecurityUtils.getPrincipal().getFullName() %>
                     </a>
                     <li class="light-blue dropdown-modal">
-                        <a href='<c:url value ="/thoat?action=logout"/>'>
+                        <a href="<c:url value ='/thoat'/>">
                             <i class="ace-icon fa fa-power-off"></i>
-                            Thoát
+                            Thoát 
                         </a>
                     </li>
                 </li>

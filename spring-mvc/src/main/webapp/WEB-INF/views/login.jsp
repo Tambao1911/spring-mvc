@@ -23,6 +23,11 @@
                                 Username  Or Password Incorrect!
                         </div>
                     </c:if>
+                    <c:if test="${param.accessDenied != null }">
+                        <div class="alert alert-danger">
+                                You Not Authorzie!
+                        </div>
+                    </c:if>
                     <form action="j_spring_security_check" id="formLogin" method="post">
 					
 						<!-- UserName input -->
